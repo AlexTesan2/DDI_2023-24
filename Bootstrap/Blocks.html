@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        
+
         <style>
                 .red
                 {
@@ -27,8 +27,18 @@
 
                 .yellow
                 {
-                    color: white;
+                    color: black;
                     background-color: yellow;
+                }
+
+                #capa1
+                {
+                    height: 160px;
+                }
+
+                #capa2
+                {
+                    height: 320px;
                 }
 
         </style>
@@ -36,14 +46,14 @@
 <body>
         <div class="container">
             <div class="row">
-                <div class="col-12 red">A</div>
-                <div class="col-12 yellow">
+                <div class="col-12 red" id="capa1">A</div>
+                <div class="col-12 yellow" id="capa2">
                     <div class="row">
-                            <div class="col-9 blue">B</div>
-                            <div class="col-3">F</div>
-                            <div class="col-3 red">C</div>
-                            <div class="col-3 blue">D</div>
-                            <div class="col-3 green">E</div>
+                            <div class="col-9 blue" id="capa1">B</div>
+                            <div class="col-3" id="capa1">F</div>
+                            <div class="col-3 red" id="capa1">C</div>
+                            <div class="col-3 blue" id="capa1">D</div>
+                            <div class="col-3 green" id="capa1">E</div>
                     </div>
                 </div>
             </div>

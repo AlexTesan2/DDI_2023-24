@@ -48,7 +48,12 @@
             height: 180px;
         }
 
-        #largo, #ladrillo, #linea, #lineaFina{
+        #largo2{
+            height: 315px;
+        }
+        
+
+        #largo, #largo2, #ladrillo, #linea, #lineaFina{
             border: solid 2px whitesmoke;
         }
 
@@ -57,8 +62,11 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="row"><div class="col-12 green" id="linea">a</div></div>
-            <div class="col-12 col-xs-12 col-sm-3 col-md-4 red" id="largo">a</div>
+            <div class="row"><div class="col-12 d-md-none green" id="ladrillo">a</div></div>
+            <div class="row"><div class="col-11 d-none d-md-block green" id="ladrillo">-</div></div>
+            <div class="row"><div class="col-12 d-xs-block d-sm-none red" id="ladrillo">a</div></div>
+            <div class="col-12 col-sm-3 d-none d-sm-block d-md-none red" id="largo2">a</div>
+            <div class="col-12 col-sm-3 d-none d-md-block red" id="largo">a</div>
             <div class="row col-xs-12 col-sm-9 col-md-8">
                 <div class="col-12 pink" id="ladrillo">a</div>
                 <div class="col-12 col-xs-12 col-md-6 orange" id="ladrillo">a</div>
@@ -75,25 +83,12 @@
                 <div class="col-6 col-xs-6 col-sm-4 col-md-2 blue" id="ladrillo">a</div>
                 <div class="col-6 col-xs-6 col-sm-4 col-md-2 blue" id="ladrillo">a</div>
             </div>
-            <div class="row"><div class="col-12 green" id="lineaFina">a</div></div>
+            <div class="row"><div class="col-12 d-md-none green" id="lineaFina">a</div></div>
+            <div class="row"><div class="col-11 d-none d-md-block green" id="lineaFina">-</div></div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
-</html>
-<!-- 
-            <div class="row">
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-                <div class="col-12 blue">a</div>
-            </div>
--->
+</html> 

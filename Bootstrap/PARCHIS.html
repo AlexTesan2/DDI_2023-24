@@ -1,33 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Esta pagina sera un tablero de parchis</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 	<style>
         .rojo{
-            color: red;
             background: red;
         }
 
         .azul{
-            color: rgb(27, 154, 234);
             background: rgb(27, 154, 234);
         }
 
         .amarillo{
-            color:rgb(236, 236, 76);
             background: rgb(236, 236, 76);
         }
 
         .verde{
-            color:  rgb(47, 207, 68);
             background:   rgb(47, 207, 68);
         }
 
         .rojo, .azul, .verde, .amarillo{
             height: 100px;
-            border: solid black 2px;
+            border: solid black 1px;
         }
 
         .cuadro{
@@ -48,10 +46,10 @@
         #numaz{transform: rotate(270deg);}
         #numve{transform: rotate(90deg);}
 
-        #colorRojo{background-color: red;}
-        #colorAzul{background-color: rgb(27, 154, 234);;}
-        #colorVerde{background-color: rgb(47, 207, 68);}
-        #colorAmarillo{background-color: rgb(236, 236, 66);}
+        .colorRojo{background-color: red;}
+        .colorAzul{background-color: rgb(27, 154, 234);;}
+        .colorVerde{background-color: rgb(47, 207, 68);}
+        .colorAmarillo{background-color: rgb(236, 236, 66);}
 
         .circulo {
             width: 20px; 
@@ -65,15 +63,15 @@
     </style>
 </head>
 <body>
-    <br />
+    <br >
 	<div class="container">
 		<div class="row">
             <div class="col-2"><!--Sector ROJO-->
                 <div class="row cuadro">
-                    <div class="col-6 rojo">a</div>
-                    <div class="col-6 rojo">a</div>
-                    <div class="col-6 rojo">a</div>
-                    <div class="col-6 rojo">a</div>
+                    <div class="col-6 rojo"></div>
+                    <div class="col-6 rojo"></div>
+                    <div class="col-6 rojo"></div>
+                    <div class="col-6 rojo"></div>
                 </div>
             </div>
             <div class="col-2 cuadro" id="numro"><!--Numeros ROJOS-->
@@ -88,22 +86,22 @@
                         <div class="celda">30</div>
                         <div class="celda">31</div>
                         <div class="celda">32</div>
-                        <div class="celda"style="height: 26px;">33</div>
+                        <div class="celda" style="height: 26px;">33</div>
                     </div>
                     <div class="col-4">
-                        <div class="celda" id="colorRojo"></div>
-                        <div class="celda" id="colorRojo"></div>
-                        <div class="celda" id="colorRojo"></div>
-                        <div class="celda" id="colorRojo"></div>
-                        <div class="celda" id="colorRojo"></div>
-                        <div class="celda" id="colorRojo"></div>
+                        <div class="celda colorRojo"></div>
+                        <div class="celda colorRojo"></div>
+                        <div class="celda colorRojo"></div>
+                        <div class="celda colorRojo"></div>
+                        <div class="celda colorRojo"></div>
+                        <div class="celda colorRojo"></div>
                         <div class="celda" style="height: 26px;">
                             34
                             <div class="circulo"></div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="celda">41</div>
+                    <div class="col-4"  style="text-align: left;">
+                        <div class="celda" style="text-align: left;">41</div>
                         <div class="celda">40</div>
                         <div class="celda" id="colorRojo">
                             39
@@ -112,16 +110,16 @@
                         <div class="celda">38</div>
                         <div class="celda">37</div>
                         <div class="celda">36</div>
-                        <div class="celda"style="height: 26px;">35</div>
+                        <div class="celda" style="height: 26px;">35</div>
                     </div>
                 </div>
             </div>
             <div class="col-2 cuadro"><!--Sector AZUL-->
                 <div class="row">
-                    <div class="col-6 azul">a</div>
-                    <div class="col-6 azul">a</div>
-                    <div class="col-6 azul">a</div>
-                    <div class="col-6 azul">a</div>
+                    <div class="col-6 azul"></div>
+                    <div class="col-6 azul"></div>
+                    <div class="col-6 azul"></div>
+                    <div class="col-6 azul"></div>
                 </div>
             </div>
 
@@ -139,15 +137,15 @@
                         <div class="celda">47</div>
                         <div class="celda">48</div>
                         <div class="celda">49</div>
-                        <div class="celda"style="height: 26px;">50</div>
+                        <div class="celda" style="height: 26px;">50</div>
                     </div>
                     <div class="col-4">
-                        <div class="celda" id="colorVerde"></div>
-                        <div class="celda" id="colorVerde"></div>
-                        <div class="celda" id="colorVerde"></div>
-                        <div class="celda" id="colorVerde"></div>
-                        <div class="celda" id="colorVerde"></div>
-                        <div class="celda" id="colorVerde"></div>
+                        <div class="celda colorVerde"></div>
+                        <div class="celda colorVerde"></div>
+                        <div class="celda colorVerde"></div>
+                        <div class="celda colorVerde"></div>
+                        <div class="celda colorVerde"></div>
+                        <div class="celda colorVerde"></div>
                         <div class="celda" style="height: 26px;">
                             51
                             <div class="circulo"></div>
@@ -163,12 +161,12 @@
                         <div class="celda">55</div>
                         <div class="celda">54</div>
                         <div class="celda">53</div>
-                        <div class="celda"style="height: 26px;">52</div>
+                        <div class="celda" style="height: 26px;">52</div>
                     </div>
                 </div>
             </div>
             <div class="col-2 cuadro"><!--Sector CENTRAL-->
-                <img src="ims/parchisCentro.png" style="width: 200px; height: 200px; margin-left: -12px;">
+                <img src="ims/parchisCentro.png" style="width: 200px; height: 200px; margin-left: -12px;" alt="Centro del tablero de parchfa-inverse" >
             </div>
             <div class="col-2 cuadro" id="numaz"><!--Numeros AZUL-->
                 <div class="row">
@@ -182,15 +180,15 @@
                         <div class="celda">13</div>
                         <div class="celda">14</div>
                         <div class="celda">15</div>
-                        <div class="celda"style="height: 26px;">16</div>
+                        <div class="celda" style="height: 26px;">16</div>
                     </div>
                     <div class="col-4">
-                        <div class="celda" id="colorAzul"></div>
-                        <div class="celda" id="colorAzul"></div>
-                        <div class="celda" id="colorAzul"></div>
-                        <div class="celda" id="colorAzul"></div>
-                        <div class="celda" id="colorAzul"></div>
-                        <div class="celda" id="colorAzul"></div>
+                        <div class="celda colorAzul"></div>
+                        <div class="celda colorAzul"></div>
+                        <div class="celda colorAzul"></div>
+                        <div class="celda colorAzul"></div>
+                        <div class="celda colorAzul"></div>
+                        <div class="celda colorAzul"></div>
                         <div class="celda" style="height: 26px;">
                             17
                             <div class="circulo"></div>
@@ -206,7 +204,7 @@
                         <div class="celda">21</div>
                         <div class="celda">20</div>
                         <div class="celda">19</div>
-                        <div class="celda"style="height: 26px;">18</div>
+                        <div class="celda" style="height: 26px;">18</div>
                     </div>
                 </div>
             </div>
@@ -215,10 +213,10 @@
 
             <div class="col-2 cuadro"><!--Sector VERDE-->
                 <div class="row">
-                    <div class="col-6 verde">a</div>
-                    <div class="col-6 verde">a</div>
-                    <div class="col-6 verde">a</div>
-                    <div class="col-6 verde">a</div>
+                    <div class="col-6 verde"></div>
+                    <div class="col-6 verde"></div>
+                    <div class="col-6 verde"></div>
+                    <div class="col-6 verde"></div>
                 </div>
             </div>
             <div class="col-2 cuadro"><!--Numeros AMARILLOS-->
@@ -233,15 +231,15 @@
                         <div class="celda">64</div>
                         <div class="celda">65</div>
                         <div class="celda">66</div>
-                        <div class="celda"style="height: 26px;">67</div>
+                        <div class="celda" style="height: 26px;">67</div>
                     </div>
                     <div class="col-4">
-                        <div class="celda" id="colorAmarillo"></div>
-                        <div class="celda" id="colorAmarillo"></div>
-                        <div class="celda" id="colorAmarillo"></div>
-                        <div class="celda" id="colorAmarillo"></div>
-                        <div class="celda" id="colorAmarillo"></div>
-                        <div class="celda" id="colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
+                        <div class="celda colorAmarillo"></div>
                         <div class="celda" style="height: 26px;">
                             68
                             <div class="circulo"></div>
@@ -257,16 +255,16 @@
                         <div class="celda">4</div>
                         <div class="celda">3</div>
                         <div class="celda">2</div>
-                        <div class="celda"style="height: 26px;">1</div>
+                        <div class="celda" style="height: 26px;">1</div>
                     </div>
                 </div>
             </div>
             <div class="col-2 cuadro"><!--Sector AMARILLO-->
                 <div class="row">
-                    <div class="col-6 amarillo">a</div>
-                    <div class="col-6 amarillo">a</div>
-                    <div class="col-6 amarillo">a</div>
-                    <div class="col-6 amarillo">a</div>
+                    <div class="col-6 amarillo"></div>
+                    <div class="col-6 amarillo"></div>
+                    <div class="col-6 amarillo"></div>
+                    <div class="col-6 amarillo"></div>
                 </div>
             </div>
         </div>

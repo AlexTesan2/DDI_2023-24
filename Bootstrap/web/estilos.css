@@ -1,0 +1,38 @@
+.buscador{
+    margin-left: 100px;
+}
+
+.sp-60{
+    margin-left: 60px;
+}
+.imLibre{
+    width: 100%; 
+    height: 250px;
+}
+.b0{
+    border: 0;
+}
+.subImagen{
+    width: 30%;
+    height: 30%;
+}
+
+.trampas{
+    background: url(imgs/mal.jpg);
+    height: 550px;
+}
+
+.total{
+    height: 747px;
+}
+
+.alertas{
+    width: 30%;
+}
+
+.alertita{width: 15%;}
+
+.medioImagen{
+    width: 100%;
+    height: auto;
+}

@@ -13,11 +13,13 @@ public class Entrenador {
 
 	private String nombre;
 	private boolean active;
+	private String username;
 
-	public Entrenador(Long id, String nombre, boolean active) {
+	public Entrenador(Long id, String nombre, boolean active, String username) {
 		this.id = id;
 		this.nombre = nombre;
 		this.active = active;
+		this.username = username;
 	}
 
 	public Entrenador() {
@@ -51,6 +53,14 @@ public class Entrenador {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import modelos.Pokemon;
@@ -43,6 +44,18 @@ public class PokemonController {
         List<Pokemon> pokemonList = pokemonRepository.findAll();
         model.addAttribute("pokemonList", pokemonList);
         return "listaPokemon";
+    }
+	
+	@GetMapping("/eliminarPokemon/{id}")
+    public String eliminarPokemon(@PathVariable Long id) {
+
+        Pokemon pokemon = pokemonRepository.findById(id).orElse(null);
+
+        if (pokemon != null) {
+            pokemonRepository.delete(pokemon);
+        }
+
+        return "redirect:/listaPokemon";
     }
 	
 	

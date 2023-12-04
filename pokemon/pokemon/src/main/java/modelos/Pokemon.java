@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
 @Entity
 public class Pokemon {
 	@Id
@@ -19,6 +20,9 @@ public class Pokemon {
 	@JoinColumn(name = "region_id")
 	private Region region;
 
+	@ManyToOne
+	private Entrenador entrenador;
+
 	public Pokemon(Long id, String nombre, Region region) {
 		super();
 		this.id = id;
@@ -30,12 +34,18 @@ public class Pokemon {
 
 	}
 
+	public Pokemon(Long id, String nombre, Region region, Entrenador entrenador) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.region = region;
+		this.entrenador = entrenador;
+	}
 
 	@Override
 	public String toString() {
-		return "Pokemon [id=" + id + ", nombre=" + nombre + ", region=" + region + "]";
+		return "Pokemon [id=" + id + ", nombre=" + nombre + ", region=" + region + ", entrenador=" + entrenador + "]";
 	}
-
 
 	public Long getId() {
 		return id;
@@ -61,6 +71,14 @@ public class Pokemon {
 
 	public void setRegion(Region region) {
 		this.region = region;
+	}
+
+	public Entrenador getEntrenador() {
+		return entrenador;
+	}
+
+	public void setEntrenador(Entrenador entrenador) {
+		this.entrenador = entrenador;
 	}
 
 }

@@ -1,17 +1,20 @@
 package modelos;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Entrenador {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String nombre;
 	private boolean active;
 
-	@Override
-	public String toString() {
-		return "Entrenador [id=" + id + ", nombre=" + nombre + ", active=" + active + "]";
-	}
-
 	public Entrenador(Long id, String nombre, boolean active) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.active = active;
@@ -19,6 +22,11 @@ public class Entrenador {
 
 	public Entrenador() {
 
+	}
+
+	@Override
+	public String toString() {
+		return "Entrenador [id=" + id + ", nombre=" + nombre + ", active=" + active + "]";
 	}
 
 	public Long getId() {
@@ -44,4 +52,5 @@ public class Entrenador {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+
 }

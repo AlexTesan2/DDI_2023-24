@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Entrenadores</title>
+</head>
+<body>
+    <h2>Formulario para Registrar Entrenadores</h2>
+    <form th:action="@{/formEntrenador}" th:object="${entrenador}" method="post">
+        <label for="nombre">Nombre del Entrenador:</label>
+        <input type="text" th:field="*{nombre}" required>
+
+        <label for="active">Activo:</label>
+        <input type="checkbox" th:field="*{active}">
+
+        <button type="submit">Registrar Entrenador</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>Listado de Regiones</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="region : ${regionList}">
+                <td th:text="${region.id}"></td>
+                <td th:text="${region.nombre}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

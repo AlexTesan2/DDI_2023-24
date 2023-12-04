@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Pokemon</title>
+    <title>Capturar Pokémon</title>
 </head>
 <body>
-    <form th:object="${pokemon}" th:action="@{/insertarPokemon}">
-        <h3>Nombre: </h3><input type="text" th:field="*{nombre}">
-        <h3>Region: </h3><input type="text" th:field="*{region}">
-        <hr>
-        <input type="submit">
+    <h2>Formulario para Capturar Pokémon</h2>
+    <form th:action="@{/formPokemon}" th:object="${pokemon}" method="post">
+        <label for="nombre">Nombre del Pokémon:</label>
+        <input type="text" th:field="*{nombre}" required>
+
+        <label for="region">Región:</label>
+        <select th:field="*{region}" required>
+            <option th:each="r : ${regiones}" th:value="${r}" th:text="${r.nombre}"></option>
+        </select>
+
+        <button type="submit">Capturar Pokémon</button>
     </form>
 </body>
 </html>

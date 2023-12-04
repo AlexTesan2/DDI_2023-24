@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>Listado de Pokémon</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="pokemon : ${pokemonList}">
+                <td th:text="${pokemon.id}"></td>
+                <td th:text="${pokemon.nombre}"></td>
+                <td th:text="${pokemon.region}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

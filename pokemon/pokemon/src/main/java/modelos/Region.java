@@ -1,24 +1,33 @@
 package modelos;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Region {
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	private String nombre;
 
-	public Region(int id, String nombre) {
+	public Region(Long id, String nombre) {
+		super();
 		this.id = id;
 		this.nombre = nombre;
 	}
 
-	@Override
-	public String toString() {
-		return "Region [id=" + id + ", nombre=" + nombre + "]";
+	public Region() {
+
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -28,6 +37,11 @@ public class Region {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	@Override
+	public String toString() {
+		return "Region [id=" + id + ", nombre=" + nombre + "]";
 	}
 
 }

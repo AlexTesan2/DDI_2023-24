@@ -1,0 +1,24 @@
+
+<form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required>
+
+    <label for="edad">Edad:</label>
+    <select id="edad" name="edad" required>
+        <option value="">Selecciona tu edad</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <!-- Agrega más opciones de edad según tus necesidades -->
+    </select>
+    <!--agrega un selecinable donde elegir a favor o encontra-->
+    <label for="favor">A favor:</label> 
+    <input type="radio" id="favor" name="favor" value="si" required>
+    <label for="contra">En contra:</label>
+    <input type="radio" id="contra" name="contra" value="no" required>
+    
+    <input type="submit" value="Enviar" style="background-color: red;">
+</form>

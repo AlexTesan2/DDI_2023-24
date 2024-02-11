@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.Date;
+
 import org.springframework.ui.Model;
 
 import com.example.demo.model.Student;
@@ -76,4 +78,39 @@ public class Pruebas {
 			super(message);
 		}
 	}
+
+
+	public String fecha() {
+		Date fechaActual = new Date();
+		String frase = ("La fecha y hora actual es: " + fechaActual);
+		return frase;
+	}
+
+
+
+	public String CalculoEdad(Date fechaNacimiento) {
+        Date fechaActual = new Date();
+        int edad = calcularEdad(fechaNacimiento, fechaActual);
+
+        if (edad >= 18) {
+            if (edad >= 65) {
+                return "La persona es mayor de edad y jubilada.";
+            } else {
+                return "La persona es mayor de edad pero no jubilada.";
+            }
+        } else {
+            return "La persona es menor de edad.";
+        }
+    }
+
+    public int calcularEdad(Date fechaNacimiento, Date fechaActual) {
+        int edad = fechaActual.getYear() - fechaNacimiento.getYear();
+        if (fechaActual.getMonth() < fechaNacimiento.getMonth()
+                || (fechaActual.getMonth() == fechaNacimiento.getMonth() && fechaActual.getDate() < fechaNacimiento.getDate())) {
+            edad--;
+        }
+        return edad;
+    }
 }
+
+

@@ -13,6 +13,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.Date;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -225,6 +227,53 @@ class PruebasTest {
 
 		assertEquals(15, prmock.sumar(1, 1));
 	}
+
+	/*
+	 * @Test void FechaTest() { String fraseEsperada = "si";
+	 * assertEquals(fraseEsperada, pr.fecha()); }
+	 */
+
+
+	@Test
+	public void testCalculoEdad_MenorDeEdad() {
+		Date fechaNacimiento = new Date(2005, 0, 1); // 1 de enero de 2005
+		assertEquals("La persona es menor de edad.", pr.CalculoEdad(fechaNacimiento));
+	}
+
+	@Test
+	public void testCalculoEdad_MayorDeEdad_NoJubilado() {
+		// Crear una fecha de nacimiento para una persona que debería ser mayor de edad
+		// pero no jubilada
+		Date fechaNacimiento = new Date(90, 0, 1); // 1 de enero de 1990
+		// Llamar al método CalculoEdad con la fecha de nacimiento y verificar el
+		// resultado
+		assertEquals("La persona es mayor de edad pero no jubilada.", pr.CalculoEdad(fechaNacimiento));
+	}
+
+	@Test
+	public void testCalculoEdad_MayorDeEdad_YJubilado() {
+		Date fechaNacimiento = new Date(50, 0, 1); // 1 de enero de 1950
+		assertEquals("La persona es mayor de edad y jubilada.", pr.CalculoEdad(fechaNacimiento));
+	}
+
+	@Test
+	public void CalcularEdadTest() {
+		Date Hoy = new Date();
+		Date fechaNacimiento = new Date(90, 0, 1); // 1 de enero de 1990
+		assertEquals(34, pr.calcularEdad(fechaNacimiento, Hoy));
+	}
+
+	/*
+	 * @Test void CalculoEdadTest1() { Date fechaNacimiento = new Date(90, 0, 1);
+	 * String fraseEsperada = "si"; assertEquals(fraseEsperada,
+	 * pr.CalculoEdad(fechaNacimiento)); }
+	 */
+
+	/*
+	 * public static void main(String[] args) { // Ejemplo de uso del método Date
+	 * fechaNacimiento = new Date(90, 0, 1); // Fecha de nacimiento (año, mes, día)
+	 * System.out.println(calcularEdadYJubilacion(fechaNacimiento)); }
+	 */
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
